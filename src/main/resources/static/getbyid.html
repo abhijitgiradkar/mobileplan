@@ -19,8 +19,17 @@
 			var mobilePlans = JSON.parse(mpList)
 			
 			
-			var mobilePlanList = document.getElementById("mobileplans");
-            
+            var mobilePlanList = document.getElementById("mobileplans");
+             for (var i = 0; i < mobilePlans.length; i++) 
+             {
+                    if( mobilePlans[i].id==idn)
+                        {
+                        mobilePlanList.innerHTML += '<tr>' +'<td class="text-align-center">'+ mobilePlans[i].id+'</td>'+'<td class="text-align-center">'+mobilePlans[i].name+'</td>' + '<td class="text-align-center">' + mobilePlans[i].description + '</td>'  + '<td class="text-align-center">' + mobilePlans[i].validity + '</td>' + '</tr>';
+
+ 
+
+                        }
+              }
             mobilePlanList.innerHTML += '<li>' + mobilePlans[idn-1].id +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[idn-1].name +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[idn-1].description + '</li>';
           	
 		}
