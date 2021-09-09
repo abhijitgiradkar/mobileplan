@@ -32,10 +32,8 @@
 			
 			
          for (var i = 0; i < mobilePlans.length; i++) {
-                mobilePlanList.innerHTML += '<tr>' +'<td class="text-align-center">'+ mobilePlans[i].id+'</td>'+'<td class="text-align-center">'+mobilePlans[i].name+'</td>' + '<td class="text-align-center">' + mobilePlans[i].description + '</td>'  + '<td class="text-align-center">' + mobilePlans[i].validity + '</td>' + '</tr>';
+                mobilePlanList.innerHTML += '<tr>' +'<td class="text-align-center">'+ mobilePlans[i].id+'</td>'+'<td class="text-align-center">'+mobilePlans[i].name+'</td>' + '<td class="text-align-center">' + mobilePlans[i].description + '</td>'  + '<td class="text-align-center">' + mobilePlans[i].validity + '</td>' +'<td class="text-align-center">'+ "<a href='http://localhost:8080/updatedata.html'>edit</a>"+'</td>' + '<td class="text-align-center">'+ "<a href='http://localhost:8080/delete.html'> Delete</a>"+'</td>' +'</tr>';
             }
-            
-            	
             
 		}
 	</script>
@@ -46,12 +44,14 @@
 <body onload=getmobileplanlist()>
 	Hello! The mobile plans in the db are: <br>
 
-	<table id="mobileplans" style="width:30%";>
+	<table border="2" width="70%" cellpadding="2" id="mobileplans";>
 	<tr>
-	<th>id</th>
-	<th>name</br></th>
-	<th>discription</br></th>
-	<th>validity</th>
+	<th>Id</th>
+	<th>Name</br></th>
+	<th>Discription</br></th>
+	<th>Validity</th>
+	<th>Edit</th>
+	<th>Delete</th>
 	</tr>
 	
 	</table>
